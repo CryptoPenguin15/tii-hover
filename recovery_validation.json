@@ -1,0 +1,49 @@
+{
+  "implementation": "HOV/HOVER, ePrint 2026/1778",
+  "runtime": "SageMath 10.9, Linux; M1 recovery untested",
+  "TII_252": {
+    "recovered_from_public_matrix": true,
+    "all_1008_locators_verified": true,
+    "full_public_run_seconds_approx": 83,
+    "timing_excludes_separate_random_control": true,
+    "matched_random_control_passed": true,
+    "input_sha256": "446059db69ea126339475b53d5c65969f6c0cde98f734cca87e167d84bafe067",
+    "kernel_dimension": 10,
+    "algebra_dimension": 10,
+    "contraction_rank": 90,
+    "direction_ranks": [
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9,
+      9
+    ],
+    "window_ranks": [
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45,
+      45
+    ]
+  },
+  "TII_100": {
+    "status": "kernel elimination in progress; not yet recovered",
+    "degree": 4,
+    "packed_matrix_GiB": 4.8601993173360825
+  },
+  "unit_tests": {
+    "run": 15,
+    "passed": 15
+  },
+  "degree_4_scroll_geometry_test_passed": true
+}

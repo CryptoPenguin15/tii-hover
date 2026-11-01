@@ -1,0 +1,66 @@
+python3 tii_cpu.py inspect data/pk_McEliece_100.txt
+{
+  "n": 254,
+  "k": 190,
+  "t": 8,
+  "m": 8,
+  "rank": 64,
+  "modulus": [
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "sha256": "276ec7ccfcb69885537fe8745dd676c028939ff6ff619d662ff7111d3c77bd0d"
+}
+
+
+python3 tii_cpu.py preflight data/pk_McEliece_100.txt
+{
+  "method": "conservative gradient-route screening",
+  "warning": "Heuristic kernel dimensions; dense sizes describe the unreduced matrix, not a memory lower bound.",
+  "candidates": [
+    {
+      "degree": 7,
+      "shortened_dimension": 50,
+      "shortened_length": 114,
+      "infinity_multiplicity": 1,
+      "predicted_kernel": 2695768,
+      "monomials": 99884400,
+      "full_hasse_conditions": 149305970,
+      "dense_matrix_GiB": 1736140.9531286918,
+      "forced_zeros": 680,
+      "polynomial_degree_bound": 679
+    },
+    {
+      "degree": 8,
+      "shortened_dimension": 56,
+      "shortened_length": 120,
+      "infinity_multiplicity": 0,
+      "predicted_kernel": 31740701,
+      "monomials": 1420494075,
+      "full_hasse_conditions": 2311146118,
+      "dense_matrix_GiB": 382187935.4163831,
+      "forced_zeros": 834,
+      "polynomial_degree_bound": 824
+    }
+  ]
+}
+
+
+python3 -m unittest discover -s tests -v
+test_field (test_tii_cpu.Tests.test_field) ... ok
+test_generated_key_and_corruption (test_tii_cpu.Tests.test_generated_key_and_corruption) ... ok
+test_real_input (test_tii_cpu.Tests.test_real_input) ... ok
+test_row_space (test_tii_cpu.Tests.test_row_space) ... ok
+test_strict_parser (test_tii_cpu.Tests.test_strict_parser) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+OK
